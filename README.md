@@ -54,13 +54,10 @@ Bills should be given:
 # Usage
 
 Clone the repository to your local machine:
-git clone https://github.com/yourusername/python-scripts-collection.git
-
-Navigate to the repository directory:
-cd python-scripts-collection
+git clone https://github.com/mehmetaliisik/MBT-Assigments.git
 
 Run each script individually using Python:
-- For the crane position calculator:
+- For the Factory Crane:
     python crane_position.py
-- For the ATM machine bill dispenser:
+- For the ATM Machine:
     python atm_machine.py
