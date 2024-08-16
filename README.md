@@ -6,20 +6,20 @@ The crane_position.py script calculates the position of a crane after a specifie
 
 ### Movement Cycle
 The crane follows a specific movement cycle:
-    - Right by 1 unit
-    - Left by 3 units
-    - Left by 2 units
-    - Right by 1 unit
-    - Right by 4 units
+- Right by 1 unit
+- Left by 3 units
+- Left by 2 units
+- Right by 1 unit
+- Right by 4 units
 This sequence repeats as time progresses.
 
 ### Script Logic
-Input: The number of minutes passed since the crane started moving.
-Calculation:
-    - The script calculates the number of completed cycles and the sum of movements within these cycles.
-    - It then computes the remaining movements after the last completed cycle.
-    - Finally, the script adds up the position from completed cycles and remaining movements to determine the crane's final position.
-Output: The crane's position after M minutes.
+- Input: The number of minutes passed since the crane started moving.
+- Calculation:
+    1. The script calculates the number of completed cycles and the sum of movements within these cycles.
+    2. It then computes the remaining movements after the last completed cycle.
+    3. Finally, the script adds up the position from completed cycles and remaining movements to determine the crane's final position.
+- Output: The crane's position after M minutes.
 
 # ATM Machine
 
