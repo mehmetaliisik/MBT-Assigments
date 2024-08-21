@@ -5,15 +5,21 @@ def atm_machine(amount):
     for i in bills:
         bill_count[i] = amount // i  # Calculate how many of this bill is needed
         amount %= i  # Update the amount with the remainder
-    return bill_count
+    return bill_count, amount
 
 while True:
-    amount = int(input("Enter the amount you want to withdraw: "))
-    if amount > 200 or amount <= 0:
-        print("Invalid amount. Please enter an amount between 1 and 200 Units.")
-    else:
-        result = atm_machine(amount)
-        print("Bills should be given:")
-        for bill, count in result.items():
-            print("{} Units: {}".format(bill, count))
-        break
+    try:
+        amount = int(input("Enter the amount you want to withdraw: "))
+        if amount > 200 or amount <= 1:
+            print("Invalid amount. Please enter an amount between 2 and 200 Units.")
+        else:
+            result, remainder = atm_machine(amount)
+            if remainder == 0:
+                print("Bills should be given:")
+                for bill, count in result.items():
+                    if count > 0:
+                        print("{} of {} Units".format(count, bill))
+            else:
+                print("The machine cannot dispense the exact amount. Please enter a different amount.")
+    except ValueError:
+        print("Invalid input. Please enter a positive integer.")
